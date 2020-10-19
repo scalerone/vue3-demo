@@ -18,7 +18,7 @@ import {
 import {
   nowTime,
   getNowTime
-} from '../hooks/useNowTime.ts'
+} from '../hooks/useNowTime';
 export default {
   setup() {
     const state = reactive({
