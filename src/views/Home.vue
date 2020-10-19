@@ -24,6 +24,7 @@ import {
   onBeforeMount,
   onBeforeUpdate,
   onUpdated,
+  computed,
   watch
 } from 'vue'
 
@@ -90,6 +91,25 @@ export default defineComponent({
     //   console.log(`old--->${oldValue}`);
     //   document.title = newValue;
     // });
+    const state: any = reactive({
+      count: 0,
+      double: computed(() => {
+        return state.count * 2
+      }),
+      midObj: {
+        innerObj: {
+          size: 0
+        }
+      }
+    })
+
+    const totalCount = ref(0) // 监听单个属性, immediate
+    watch(() => totalCount.value, (newVal, oldVal) => {
+      console.log(`count + num = ${newVal}, immediate=true`)
+    }, {
+      immediate: true
+    })
+
     watch([overText, () => data.selectGirl, () => data.count], (newValue, oldValue) => {
       console.log(`new--->${newValue}`);
       console.log(`old--->${oldValue}`);
@@ -97,10 +117,12 @@ export default defineComponent({
     }, {
       deep: true
     });
+
     return {
       ...toRefs(data),
       overText,
-      overAction
+      overAction,
+      totalCount
     }
   },
 })
