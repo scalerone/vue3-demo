@@ -5,7 +5,8 @@
   <router-link to="/time">Time</router-link> |
   <router-link to="/dog">Dog</router-link> |
   <router-link to="/news">News</router-link> |
-  <router-link to="/router/path/b">Router4</router-link>
+  <router-link to="/router/path/b">Router4</router-link> |
+  <router-link to="/vuex">Vuex</router-link>
 </div>
 <router-view />
 </template>
