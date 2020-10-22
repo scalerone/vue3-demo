@@ -1,8 +1,8 @@
 <template>
 <img alt="Vue logo" src="../assets/logo.png" />
 <div>
-  <h2>欢迎光临红浪漫洗浴中心</h2>
-  <div>请选择一位美女为你服务</div>
+  <h2>欢迎光临大鹏保健中心</h2>
+  <div>请选择一位技师为你服务</div>
 </div>
 <div>
   <button v-for="(item, index) in girls" v-bind:key="index" @click="selectGirlFun(index)">
