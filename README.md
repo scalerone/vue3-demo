@@ -1,4 +1,5 @@
-# vue3-1-ts
+# Vue3.0 + Vue-Router4.0 + Vuex4.0 +Antdv
+入门练手demo
 
 ## Project setup
 ```
