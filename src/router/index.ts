@@ -32,6 +32,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'News',
     component: () => import(/* webpackChunkName: "news" */ '../views/News.vue')
   },
+  {
+    path: '/router/:path*',
+    name: 'router',
+    component: () => import('../views/Router.vue')
+  },
 ]
 
 const router = createRouter({
