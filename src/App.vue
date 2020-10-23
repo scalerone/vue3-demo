@@ -6,9 +6,11 @@
   <router-link to="/dog">Dog</router-link> |
   <router-link to="/news">News</router-link> |
   <router-link to="/router/path/b">Router4</router-link> |
-  <router-link to="/vuex">Vuex</router-link>
+  <router-link to="/vuex">Vuex</router-link> |
+  <router-link to="/teleport">Teleport</router-link> |
 </div>
 <router-view />
+<div id="endofbody"></div>
 </template>
 
 <style>
