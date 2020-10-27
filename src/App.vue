@@ -8,6 +8,7 @@
   <router-link to="/router/path/b">Router4</router-link> |
   <router-link to="/vuex">Vuex</router-link> |
   <router-link to="/teleport">Teleport</router-link> |
+  <router-link to="/suspense">Suspense</router-link> |
 </div>
 <router-view />
 <div id="endofbody"></div>

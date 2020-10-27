@@ -47,6 +47,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Teleport',
     component: () => import('../views/Teleport.vue')
   },
+  {
+    path: '/suspense',
+    name: 'Suspense',
+    component: () => import('../views/Suspense.vue')
+  },
 ]
 
 const router = createRouter({
