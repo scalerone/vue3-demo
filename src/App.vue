@@ -9,6 +9,7 @@
   <router-link to="/vuex">Vuex</router-link> |
   <router-link to="/teleport">Teleport</router-link> |
   <router-link to="/suspense">Suspense</router-link> |
+  <router-link to="/composition">Composition API</router-link> |
 </div>
 <router-view />
 <div id="endofbody"></div>

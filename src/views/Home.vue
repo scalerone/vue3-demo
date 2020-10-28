@@ -1,14 +1,14 @@
 <template>
 <img alt="Vue logo" src="../assets/logo.png" />
 <div>
-  <h2>欢迎光临大鹏保健中心</h2>
+  <h2>欢迎光临CBD酱油SPA</h2>
   <div>请选择一位技师为你服务</div>
 </div>
 <div>
-  <button v-for="(item, index) in girls" v-bind:key="index" @click="selectGirlFun(index)">
+  <button v-for="(item, index) in girls" v-bind:key="index" @click="selectWaiterFun(index)">
     {{ index }} : {{ item }}
   </button>
-  <div>你选择了【{{ selectGirl }}】为你服务</div>
+  <div>你选择了【{{ selectWaiter }}】为你服务</div>
 </div>
 <div>{{ overText }}</div>
 <div><button @click="overAction">点餐完毕</button></div>
@@ -30,9 +30,9 @@ import {
 
 interface DataProps {
   girls: string[];
-  selectGirl: string;
+  selectWaiter: string;
   count: number;
-  selectGirlFun: (index: number) => void;
+  selectWaiterFun: (index: number) => void;
 }
 export default defineComponent({
   name: 'Home',
@@ -40,10 +40,10 @@ export default defineComponent({
     console.log('1-开始创建组件-----setup()')
     const data: DataProps = reactive({
       girls: ['大脚', '刘英', '晓红'],
-      selectGirl: '',
+      selectWaiter: '',
       count: 0,
-      selectGirlFun: (index: number) => {
-        data.selectGirl = data.girls[index]
+      selectWaiterFun: (index: number) => {
+        data.selectWaiter = data.girls[index]
         data.count++;
         console.log(data.count)
       },
@@ -109,8 +109,8 @@ export default defineComponent({
     }, {
       immediate: true
     })
-
-    watch([overText, () => data.selectGirl, () => data.count], (newValue, oldValue) => {
+   //函数解决reactive的监听
+    watch([overText, () => data.selectWaiter, () => data.count], (newValue, oldValue) => {
       console.log(`new--->${newValue}`);
       console.log(`old--->${oldValue}`);
       document.title = newValue[0] + '';

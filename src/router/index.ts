@@ -52,6 +52,20 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Suspense',
     component: () => import('../views/Suspense.vue')
   },
+  {
+    path: '/composition',
+    name: 'Composition',
+    redirect: '/composition/reactive',
+    component: () => import('../views/composition/index.vue'),
+    children:[
+      {
+        path: 'reactive',
+        name: 'Reactive',
+        component: () => import('../views/composition/reactive.vue'),
+      }
+    
+    ]
+  },
 ]
 
 const router = createRouter({
