@@ -62,7 +62,22 @@ const routes: Array<RouteRecordRaw> = [
         path: 'reactive',
         name: 'Reactive',
         component: () => import('../views/composition/reactive.vue'),
-      }
+      },
+      {
+        path: 'readonly',
+        name: 'Readonly',
+        component: () => import('../views/composition/readonly.vue'),
+      },
+      {
+        path: 'computed',
+        name: 'Computed',
+        component: () => import('../views/composition/computed.vue'),
+      },
+      {
+        path: 'watch',
+        name: 'Watch',
+        component: () => import('../views/composition/watch.vue'),
+      },
     
     ]
   },

@@ -2,6 +2,9 @@
 <h1>Composition API</h1>
   
   <router-link to="/composition/reactive">reactive && ref </router-link> |
+  <router-link to="/composition/readonly">readonly  </router-link> |
+  <router-link to="/composition/computed">computed </router-link> |
+  <router-link to="/composition/watch">watch & watchEffect </router-link> |
   
    
 
@@ -11,6 +14,7 @@
 </template>
 
 <script>
+  //enjoy it!
 export default {};
 </script>
 <style  scoped>
